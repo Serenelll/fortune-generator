@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Serene's Fortune Generator 🍪💖</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #e6f7ff);
+      color: #444;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #fortune {
+      font-size: 24px;
+      margin: 40px auto;
+      padding: 20px;
+      width: 60%;
+      border-radius: 12px;
+      background-color: #fff8fc;
+      box-shadow: 0 0 20px rgba(255, 200, 255, 0.3);
+    }
+    button {
+      background-color: #ff99cc;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      border-radius: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #ff66b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>💖✨ Your Digital Fortune ✨💖</h1>
+  <div id="fortune">Click the button to receive your magic fortune 🌸</div>
+  <button onclick="generateFortune()">Reveal Fortune 🍪</button>
+
+  <script>
+    const fortunes = [
+      "You are the sparkle that ignites the stars ✨",
+      "A beautiful surprise is headed your way 💝",
+      "You radiate charm and sweet magic 🌟",
+      "Love, laughter, and luxury are forever yours 💋",
+      "You make every moment golden ☀️",
+      "You are aligned with your dream timeline 🕊️",
+      "Your energy is soft, strong, and unforgettable 💐",
+      "What you wish is already yours 🧚‍♀️",
+      "You're the girl who turns vibes into masterpieces 🎨",
+      "You were born lucky, and it shows 💫"
+    ];
+
+    function generateFortune() {
+      const randomIndex = Math.floor(Math.random() * fortunes.length);
+      document.getElementById('fortune').innerText = fortunes[randomIndex];
+    }
+  </script>
+</body>
+</html>
